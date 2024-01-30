@@ -43,15 +43,15 @@ public class Encoder {
         return encodedText.toString();
     }
 
-    public String decode(String plainText) {
-        plainText = plainText.toUpperCase();
+    public String decode(String encodedText) {
+        encodedText = encodedText.toUpperCase();
         StringBuilder decodedText = new StringBuilder();
 
-        char offsetChar = plainText.charAt(0);
+        char offsetChar = encodedText.charAt(0);
         int offsetNum = keyTable.convertCharToInt(offsetChar);
 
-        for (int i = 1; i < plainText.length(); i++) {
-            char c = plainText.charAt(i);
+        for (int i = 1; i < encodedText.length(); i++) {
+            char c = encodedText.charAt(i);
             char cConverted = convertCharByOffsetValue(c,offsetNum,DECODE);
             decodedText.append(cConverted);
         }
