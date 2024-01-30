@@ -30,8 +30,7 @@ public class Encoder {
         plainText = plainText.toUpperCase();
         StringBuilder encodedText = new StringBuilder();
 
-//        int offsetNum = (int) (Math.random()*44);
-        int offsetNum = 1;
+        int offsetNum = (int) (Math.random()*44);
         char offsetChar = keyTable.convertIntToChar(offsetNum);
         encodedText.append(offsetChar);
 
