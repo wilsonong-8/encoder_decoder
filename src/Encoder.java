@@ -12,8 +12,9 @@
  * encodedText back to plainText.
  *
  * public char convertCharByOffsetValue consists of a refactored code that is shared between encode and decode, it is
- * used in the For Loop and takes in 3 arguments (char c,int offsetValue,String function). It will convert a Character
- * by Encoding and Decoding depending on the (String function) argument.
+ * used in the For Loop and takes in 3 arguments (char c,int offsetValue,String function).
+ * It will convert a Character by Encoding and Decoding depending on the (String function) argument.
+ * Any character that is not part of the 44 characters in the HashMap will be returned as the original character.
  */
 
 public class Encoder {
