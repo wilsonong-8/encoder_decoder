@@ -7,7 +7,7 @@
  * public String encode takes in a String as Argument, changes it to upperCase, generates a random Offset Value
  * between 0-43 to find the Offset Character. It then uses the Offset Value to convert the plaintext into encodedText.
  *
- *public String decode takes in a String as Argument, changes it to upperCase, finds the Offset Value based on the
+ *public String decode takes in a String as Argument, finds the Offset Value based on the
  * first Character of the argument. Then uses the Offset value to find the initial value and thereby converting the
  * encodedText back to plainText.
  *
@@ -44,7 +44,6 @@ public class Encoder {
     }
 
     public String decode(String encodedText) {
-        encodedText = encodedText.toUpperCase();
         StringBuilder decodedText = new StringBuilder();
 
         char offsetChar = encodedText.charAt(0);
